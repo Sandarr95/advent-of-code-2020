@@ -42,7 +42,7 @@ fn main() {
 
   if let Ok(input) = aoc.get_input(false) {
     let lines = input.split("\n");
-    let count_policy1 = lines.clone().filter(|line| validate_policy1(&re, &line)).count();
+    let count_policy1 = lines.clone().filter(|&line| validate_policy1(&re, &line)).count();
     let count_policy2 = lines.clone().filter(|&line| validate_policy2(&re, &line)).count();
     println!("Part 1: {}", count_policy1);
     println!("Part 2: {}", count_policy2);
