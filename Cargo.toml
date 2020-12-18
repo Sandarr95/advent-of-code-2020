@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 aocf = "0.1.10"
+regex = "1"
 
 [[src]]
 name = "day1"
