@@ -22,7 +22,7 @@ fn main() {
       .filter_map(|line| isize::from_str_radix(&line, 2).ok());
     let ids = HashSet::<isize>::from_iter(ids_iter.clone());
     let max_num = ids_iter.fold(0, |max, item| if max > item { max } else { item });
-    
+
     let mut cnt = 0;
     let my_num = loop { if check_num(&ids, cnt) { break cnt } cnt+=1; };
 
